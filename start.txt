@@ -1,0 +1,13 @@
+1. 루트 폴더 연결
+git init 
+git remote add origin reposiotry address
+
+2. Push 전엔 Pull이 있다!
+- 다른 사람의 git에 파일을 내려받을 수 있음
+git pull origin master: 저장해놓은 reposiotry에서 해당 폴더로 모든 자료를 옮김
+- 내가 생성한 것을 올림
+git status: 현재 git과의 상태를 체크
+git add .: 변경된 파일들을 모두 tracking
+git commit -m "message": 인식할 수 있는 commit을 달아줌
+git push origin master: 실제로 git에 Push
+
