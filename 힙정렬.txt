@@ -1,0 +1,26 @@
+힙 자료구조
+heapq를 사용할 시 별도의 정렬 함수 없이 정렬 가능.
+
+import heapq
+
+h = []
+빈 리스트 h를 생성한 후 heapq모듈을 통해 함수를 호출 할 때마다 생성된 리스트의 인자로 넘겨야 한다.
+힙에 원소 추가: heapq.heappush(h, x)
+힙에서 원소 삭제: heapq.heappop(h) -> 가장 작은 원소부터 삭제
+최소 값은 무조건 h[0]
+힙을 사용하여 순차적인 작은 원소를 얻기 위해서는 heappop을 통해 가능 하다.
+기존 리스트를 힙으로 변환: heapq.heapify(h)
+
+힙 정렬
+import heapq
+
+def heapsort(nums):
+	heap = []
+	for num in nums:
+		heapq.heappush(heap, num)
+	sorted_nums = []
+	while heap:
+		sorted_nums.append(heapq.heappop(heap))
+	return sorted_nums
+
+
