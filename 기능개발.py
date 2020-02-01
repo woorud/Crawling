@@ -4,6 +4,7 @@ import math #math.round(): 반올림
             #math.abs(): 절대값
             #math.max,min(): 최대값, 최소값
             #math.pow(): a의 b승과 제곱근
+            #math.sqrt(): 제곱근
 def solution(progresses, speeds):
 
     d = []
