@@ -1,0 +1,11 @@
+Hash는 key와 value로 이루어져있는 구조.
+key에 따라 value가 있는 구조.
+items(): key와 value를 반환, 즉 for 문은 두 개의 인자를 받음.
+clear(): key와 value의 쌍을 지우기.
+get(): key로부터 value 얻기.
+
+
+from collections import Counter
+데이터의 개수를 셀 때 사용.
+most_common(n): n개의 상위 요소 반환. 
+&, |: 교집합과 합집합 연산이 가능하다.
