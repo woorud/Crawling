@@ -1,0 +1,62 @@
+SQL
+
+DATETIME -> DATE로 바꾸기
+FORMAT을 이용함.
+MONTH의 경우 	%M = JAN, FAB, MAR, APR....
+		%m = 01, 02, 03, 04....
+
+DISTINCT 	VS 	GROUP BY 
+속도 GOOD	속도 BAD
+정렬 X		정렬 O
+
+JOIN
+두 개 이상의 테이블이나 데이터베이스를 연결하여 데이터를 검색하는 방법.
+기본키 또는 외래키로 두 테이블을 연결.
+
+INNER(A∩B)
+SELECT 테이블 별칭.조회할 칼럼, 테이블 별칭.조회할 칼럼
+FROM 기준테이블 별칭
+INNER JOIN 조인테이블 별칭 ON 기준테이블 별칭.기준키 = 조인테이블 별칭.기준키
+
+LEFT OUTER(A-B)
+SELECT 테이블 별칭.조회할 칼럼, 테이블 별칭.조회할 칼럼
+FROM 기준테이블 별칭
+LEFT OUTER JOIN 조인테이블 별칭 ON 기준테이블 별칭.기준키 = 조인테이블 별칭.기준키
+
+RIGHT OUTER(B-A)
+SELECT 테이블 별칭.조회할 칼럼, 테이블 별칭.조회할 칼럼
+FROM 기준테이블 별칭
+RIGHT OUTER JOIN 조인테이블 별칭 ON 기준테이블 별칭.기준키 = 조인테이블 별칭.기준키
+
+FULL OUTER(A∪B)
+SELECT 테이블 별칭.조회할 칼럼, 테이블 별칭.조회할 칼럼
+FROM 기준테이블 별칭
+FULL OUTER JOIN 조인테이블 별칭 ON 기준테이블 별칭.기준키 = 조인테이블 별칭.기준키
+
+CROSS(모든 경우의 수를 전부 표현 -> 기준테이블이 A일 경우 A의 데이터 한 ROW를 B테이블 전체와 JOIN)
+1.
+SELECT 테이블 별칭.조회할 칼럼, 테이블 별칭.조회할 칼럼
+FROM 기준테이블 별칭
+CROSS JOIN 조인테이블 별칭
+2.
+SELECT 테이블별칭.조회할 칼럼, 테이블 별칭.조회할 칼럼
+FROM 기준테이블 별칭, 조인테이블 별칭
+
+SELF(자기자신과 자기자신을 조인 -> 하나의 테이블을 여러번 복사해서 조인)
+SELECT 테이블 별칭.조회할 칼럼, 테이블 별칭.조회할 칼럼
+FROM 테이블 별칭, 테이블 별칭2
+
+UNION(합집합)
+UNION	VS	UNION ALL
+두 쿼리문을 하나로 합쳐준다.
+칼럼명이 같아야한다.(다를 경우 AS를 사용하여 같게 만들어줌.)
+칼럼별 데이터 타입이 같아야 한다.
+중복값 제거	중복값 포함
+속도 GOOD	속도 BAD
+
+SELECT * FROM 테이블명
+UNION / UNION ALL
+SELECT * FROM 테이블명
+
+SET으로 기본값을 설정한 후 적용할 수 있다.
+A := B: A에 B 대입
