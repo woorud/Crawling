@@ -10,7 +10,7 @@ def solution(d, budget):
         elif sum(bl) == budget:
             result = len(bl)
         else:
-            continue
+            pass
 
     return result
 
