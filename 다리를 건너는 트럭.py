@@ -1,10 +1,9 @@
 def solution(bridge_length, weight, truck_weights):
     passing = [0] * bridge_length
-    passed = []
     sec = 0
     while passing:
         sec += 1
-        passed.append(passing.pop(0))
+        passing.pop(0)
 
         if truck_weights:
             if sum(passing) + truck_weights[0] <= weight :
