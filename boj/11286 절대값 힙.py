@@ -6,6 +6,9 @@ heapq.heapify(absheap)
 for i in range(n):
     num = int(sys.stdin.readline())
     if num != 0:
-        heapq.heappush(absheap, num)
+        heapq.heappush(absheap, (abs(num), num))
     else:
         try:
+            print(heapq.heappop(absheap)[1])
+        except:
+            print(0)
