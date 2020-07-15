@@ -11,7 +11,7 @@ for i in range(n):
 target = max(books.values())
 res = []
 
-for b, v in books.items():
-    if target == v:
-        res.append(b)
+for book, value in books.items():
+    if target == value:
+        res.append(book)
 print(sorted(res)[0])

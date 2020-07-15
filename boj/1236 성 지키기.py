@@ -1,8 +1,8 @@
 n, m = map(int, input().split())
 matrix = [input() for i in range(n)]
 
-row = [0] * n
-column = [0] * m
+row = [0]*n
+column = [0]*m
 
 for i in range(n):
     for j in range(m):

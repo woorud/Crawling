@@ -2,7 +2,7 @@ def ascending(array):
     now = array[0]
     res = 1
     for i in range(1, len(array)):
-        if now < array[i]:
+        if now<array[i]:
             res += 1
             now = array[i]
     return res
