@@ -5,6 +5,7 @@ class Node:
         self.data = None
         self.children = {}
         self.length = defaultdict(int)
+        # 인자값이 없으면 0
 
 class Trie:
     def __init__(self):
