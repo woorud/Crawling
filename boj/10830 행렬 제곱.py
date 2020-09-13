@@ -1,8 +1,5 @@
-import sys
-
-N, B = map(int, sys.stdin.readline().split())
-A = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
-
+N, B = map(int, input().split())
+A = [list(map(int, input().split())) for _ in range(N)]
 
 def matric_mul(A, B):
     if B == 1:
@@ -31,7 +28,6 @@ def matric_mul(A, B):
                     tmp[i][j] += C[i][k] * C[k][j]
                 tmp[i][j] %= 1000
         return tmp
-
 
 result = matric_mul(A, B)
 for li in result:
